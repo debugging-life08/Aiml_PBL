@@ -1,0 +1,25 @@
+Phase 1: Exploratory Data Analysis (EDA) Overview The Exploratory Data Analysis (EDA) phase focuses on understanding the dataset, identifying patterns, cleaning inconsistencies, and preparing the data for machine learning models. This phase ensures that the data is reliable, structured, and meaningful.
+
+Dataset Understanding Initial inspection of the dataset was performed using: df.info() df.describe() df.isnull().sum() Objectives: Understand data types (numerical, categorical, datetime) Identify missing values Analyze statistical distribution of features
+
+Data Cleaning
+
+Removing Irrelevant Columns The following columns were removed as they do not contribute to prediction: index → row identifier trans_num → unique transaction ID
+Removing Duplicates
+Duplicate rows were identified and removed to prevent bias in model training:
+
+df.drop_duplicates()
+
+Handling Missing Values Missing values were identified across multiple columns Strategy applied: Numerical columns → filled using mean Categorical columns → filled using mode This ensures no loss of data while maintaining distribution consistency.
+
+Feature Engineering Raw data was transformed into meaningful features: From Transaction Timestamp: trans_hour → Hour of transaction trans_day → Day of month trans_month → Month weekday → Day of week From Date of Birth: age → Calculated from dob Columns Removed: trans_date_trans_time dob
+
+Encoding Categorical Variables To make data suitable for machine learning: One-Hot Encoding: category state Label Encoding: merchant city job This converts categorical values into numerical representations.
+
+Outlier Detection & Treatment Detection Method: Interquartile Range (IQR) Visualized using boxplots Columns Treated: amt city_pop age
+
+Strategy: Outliers replaced with median values to reduce skewness Note: Geographic features (lat, long, merch_lat, merch_long) were not modified as they represent real-world locations.
+
+Feature Scaling To normalize feature values: Applied StandardScaler Ensured all features have similar scale (mean ≈ 0, std ≈ 1) This step is crucial for: KNN SVM Logistic Regression
+
+Outcome of EDA Phase Clean and structured dataset No missing or duplicate values Engineered features for better pattern detection Fully numeric dataset ready for modeling

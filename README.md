@@ -16,4 +16,8 @@ Workflow Data Collection → Data Cleaning → Feature Engineering → Encoding 
 
 Models are evaluated using:
 
-1.Accuracy 2.Precision 3.Recall 4.F1-score 5.Confusion Matrix
+1.Accuracy 
+2.Precision 
+3.Recall 
+4.F1-score 
+5.Confusion Matrix

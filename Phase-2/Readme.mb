@@ -4,11 +4,11 @@ Overview In this phase, machine learning models are applied to the preprocessed 
 
 Models Implemented
 
-Logistic Regression A statistical model used for binary classification Predicts probability of fraud (0 or 1) Works well for linearly separable data
+1. Logistic Regression A statistical model used for binary classification Predicts probability of fraud (0 or 1) Works well for linearly separable data
 
-K-Nearest Neighbors (KNN) Instance-based learning algorithm Classifies data based on nearest neighbors Sensitive to feature scaling
+2. K-Nearest Neighbors (KNN) Instance-based learning algorithm Classifies data based on nearest neighbors Sensitive to feature scaling
 
-Support Vector Machine (SVM) Finds optimal boundary (hyperplane) between classes Effective in high-dimensional spaces Works well with scaled data
+3. Support Vector Machine (SVM) Finds optimal boundary (hyperplane) between classes Effective in high-dimensional spaces Works well with scaled data
 
 Evaluation Metrics Used Accuracy Measures overall correctness of the model Formula: Accuracy = (TP + TN) / Total Precision Measures correctness of positive predictions (fraud detection) Important when false positives matter Formula:
 

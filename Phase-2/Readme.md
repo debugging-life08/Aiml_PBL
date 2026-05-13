@@ -16,11 +16,6 @@ Instance-based learning algorithm
 Classifies data based on nearest neighbors
 Sensitive to feature scaling
 
-5. Support Vector Machine (SVM)
-Finds optimal boundary (hyperplane) between classes
-Effective in high-dimensional spaces
-Works well with scaled data
-
 Evaluation Metrics Used
 Accuracy
 Measures overall correctness of the model
